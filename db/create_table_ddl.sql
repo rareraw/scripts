@@ -25,10 +25,10 @@ DROP TABLE IF EXISTS `stats`.`RAW_COLLECTION` ;
 
 CREATE TABLE IF NOT EXISTS `stats`.`RAW_COLLECTION` (
   `seq` INT NOT NULL AUTO_INCREMENT,
-  `years_of_exprience` INT NULL,
+  `years_of_experience` INT NULL,
   `recruitment_site_seq` VARCHAR(25) NULL,
   `company` VARCHAR(50) NULL COMMENT '필수사항, 우대사항 구분',
-  `condition_type` ENUM('REQUIRED', 'PREFFERD') NULL,
+  `condition_type` ENUM('REQUIRED', 'PREFERRED', 'UNKNOWN') NULL,
   `collection_date` DATE NOT NULL,
   `create_id` VARCHAR(30) NULL,
   `write_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
