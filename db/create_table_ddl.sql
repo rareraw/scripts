@@ -21,9 +21,9 @@ USE `stats` ;
 -- -----------------------------------------------------
 -- Table `stats`.`RAW_COLLECTION`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `stats`.`RAW_COLLECTION` ;
+DROP TABLE IF EXISTS `stats`.`RAW_COLLECTIONS` ;
 
-CREATE TABLE IF NOT EXISTS `stats`.`RAW_COLLECTION` (
+CREATE TABLE IF NOT EXISTS `stats`.`RAW_COLLECTIONS` (
   `seq` INT NOT NULL AUTO_INCREMENT,
   `years_of_experience` INT NULL,
   `recruitment_site_seq` VARCHAR(25) NULL,
@@ -39,9 +39,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `stats`.`RAW_WORD`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `stats`.`RAW_WORD` ;
+DROP TABLE IF EXISTS `stats`.`RAW_WORDS` ;
 
-CREATE TABLE IF NOT EXISTS `stats`.`RAW_WORD` (
+CREATE TABLE IF NOT EXISTS `stats`.`RAW_WORDS` (
   `seq` INT NOT NULL AUTO_INCREMENT,
   `word` VARCHAR(30) NOT NULL,
   `raw_collection_seq` INT NOT NULL,
@@ -58,9 +58,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `stats`.`RECRUITMENT_SITE`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `stats`.`RECRUITMENT_SITE` ;
+DROP TABLE IF EXISTS `stats`.`RECRUITMENT_SITES` ;
 
-CREATE TABLE IF NOT EXISTS `stats`.`RECRUITMENT_SITE` (
+CREATE TABLE IF NOT EXISTS `stats`.`RECRUITMENT_SITES` (
   `seq` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `crwaling_root_urls` VARCHAR(2000) NOT NULL,
