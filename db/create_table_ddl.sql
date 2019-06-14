@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `stats`.`RAW_WORDS` (
   INDEX `fk_RAW_WORD_RAW_COLLECTION1_idx` (`raw_collection_seq` ASC),
   CONSTRAINT `fk_RAW_WORD_RAW_COLLECTION1`
     FOREIGN KEY (`raw_collection_seq`)
-    REFERENCES `stats`.`RAW_COLLECTION` (`seq`)
+    REFERENCES `stats`.`RAW_COLLECTIONS` (`seq`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
@@ -131,9 +131,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `stats`.`CONSTANT`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `stats`.`CONSTANT` ;
+DROP TABLE IF EXISTS `stats`.`CONSTANTS` ;
 
-CREATE TABLE IF NOT EXISTS `stats`.`CONSTANT` (
+CREATE TABLE IF NOT EXISTS `stats`.`CONSTANTS` (
   `seq` INT NOT NULL AUTO_INCREMENT,
   `key` VARCHAR(45) NOT NULL,
   `values` VARCHAR(2000) NOT NULL,
@@ -147,9 +147,9 @@ ENGINE = InnoDB;
 -- -----------------------------------------------------
 -- Table `stats`.`RANK_MONTHLY`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `stats`.`RANK_MONTHLY` ;
+DROP TABLE IF EXISTS `stats`.`RANK_MONTHLYS` ;
 
-CREATE TABLE IF NOT EXISTS `stats`.`RANK_MONTHLY` (
+CREATE TABLE IF NOT EXISTS `stats`.`RANK_MONTHLYS` (
   `seq` INT NOT NULL AUTO_INCREMENT,
   `rank` INT NOT NULL,
   `base_year_month` VARCHAR(6) NOT NULL,
