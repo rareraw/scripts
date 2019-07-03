@@ -161,6 +161,19 @@ CREATE TABLE IF NOT EXISTS `stats`.`RANK_MONTHLYS` (
   PRIMARY KEY (`seq`))
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `stats`.`KEYWORD_MAPS`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `stats`.`KEYWORD_MAPS` ;
+
+CREATE TABLE IF NOT EXISTS `stats`.`KEYWORD_MAPS` (
+  `category` VARCHAR(25) NOT NULL,
+  `keyword` VARCHAR(50) NOT NULL,
+  `mappings_keyword` VARCHAR(2000) NULL,
+  `is_use` TINYINT(1) NULL,
+  PRIMARY KEY (`keyword`))
+ENGINE = InnoDB;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
